@@ -49,4 +49,42 @@
         // or    
         echo $myobject->getName()."\n";
 
-?>
+
+//================================ constructor =========================================
+
+    // creat a class
+    class apprenantTest 
+    {
+        //les proprieties
+        public $name;
+        public $age;
+
+        function __construct($name,$age)
+        {
+            $this->name = $name;
+            $this->age = $age;
+        }
+
+        
+
+        public function getName()
+        {
+            return $this->name; 
+        }
+        
+        public function setName($tempName)
+        {
+            $this->name = $tempName;
+        }
+
+        public function toString()  //afficher les donnees d'un objets
+        {
+            return "nom :".$this->name." age:".$this->age;
+        }
+    }
+
+    $apprenant1 = new apprenantTest("ali", 33); 
+    $apprenant2 = new apprenantTest("youcode", 313);
+    echo $apprenant1->toString()."\n";
+    echo $apprenant2->toString();
+?> 
