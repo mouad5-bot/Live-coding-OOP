@@ -65,7 +65,10 @@
             $this->age = $age;
         }
 
-        
+        function __destruct()
+        {
+            echo 'by';
+        }
 
         public function getName()
         {
@@ -87,4 +90,20 @@
     $apprenant2 = new apprenantTest("youcode", 313);
     echo $apprenant1->toString()."\n";
     echo $apprenant2->toString();
+
+    //======================= destructor =================================
+    
+    class Fruit {
+        public $name;
+        public $color;
+      
+        function __construct($name) {
+          $this->name = $name;
+        }
+        function __destruct() {
+          echo "\n"."The fruit is {$this->name}."."\n";
+        }
+      }
+      
+      $apple = new Fruit("Apple");
 ?> 
