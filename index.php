@@ -67,7 +67,7 @@
 
         function __destruct()
         {
-            echo 'by';
+            echo "\n by=>".$this->name;
         }
 
         public function getName()
@@ -93,6 +93,9 @@
 
     //======================= destructor =================================
     
+    //A destructor is called when the object is destructed or the script is stopped or exited. 
+    //If you create a __destruct() function, PHP will automatically call this function at the end of the script.
+    
     class Fruit {
         public $name;
         public $color;
@@ -101,7 +104,7 @@
           $this->name = $name;
         }
         function __destruct() {
-          echo "\n"."The fruit is {$this->name}."."\n";
+          echo "\n"."The fruit destruct is {$this->name}."."\n";
         }
       }
       
